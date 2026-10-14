@@ -1094,3 +1094,17 @@ a.machine-visual { cursor: zoom-in; color: inherit; }
 .machine-zoom svg { width: 13px; height: 13px; }
 .machine-visual:hover .machine-zoom { background: var(--accent); color: var(--ink); opacity: 1; }
 @media (max-width: 780px) { .machine-zoom { right: 10px; bottom: 10px; padding: 8px 10px; font-size: 10px; } .machine-visual .machine-count { bottom: 12px; left: 12px; } }
+/* service detail v2 */
+.service-page .service-detail-grid { align-items: stretch; }
+.service-page .service-media { display: flex; flex-direction: column; gap: 14px; }
+.service-page .service-media-frame { flex: 1; min-height: 420px; }
+.service-page .service-media-frame img { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; object-fit: cover; }
+.service-page .service-media-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(11,23,38,.72) 100%); pointer-events: none; }
+.media-caption { position: absolute; left: 18px; right: 18px; bottom: 16px; z-index: 2; color: white; font: 700 13px var(--font-display); letter-spacing: -.01em; text-shadow: 0 2px 8px rgba(0,0,0,.4); }
+.service-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.service-highlights > div { display: grid; gap: 4px; padding: 14px 12px; border: 1px solid rgba(11,23,38,.06); border-radius: 18px; background: white; box-shadow: 0 10px 26px rgba(11,23,38,.05); text-align: center; justify-items: center; }
+.service-highlight-icon { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 4px; border-radius: 12px; background: #fff3df; color: var(--accent-deep); }
+.service-highlight-icon svg { width: 18px; height: 18px; }
+.service-highlights strong { font: 800 13px/1.2 var(--font-display); letter-spacing: -.02em; }
+.service-highlights small { color: #4a5663; font-size: 11px; line-height: 1.4; }
+@media (max-width: 780px) { .service-page .service-media-frame { min-height: 260px; } .service-highlights { gap: 8px; } .service-highlights > div { padding: 12px 8px; } .service-highlights small { display: none; } }

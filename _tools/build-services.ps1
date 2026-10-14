@@ -107,12 +107,16 @@ $template = @'
   <main>
     <section class="page-hero" style="background-image:url('../assets/images/banner.jpg')"><div class="container page-hero-content"><p class="eyebrow eyebrow-pill eyebrow-pill-dark" data-icon="bolt">Hizmetlerimiz · {{NUM}}</p><h1>{{TITLE}}</h1><div class="breadcrumbs"><a href="../index.html">Ana Sayfa</a><span>/</span><a href="../hizmetler.html">Hizmetlerimiz</a><span>/</span> {{TITLE}}</div></div></section>
 
-    <section class="section-pad about-section corp-page">
+    <section class="section-pad about-section corp-page service-page">
       <div class="container service-detail-grid">
         <div class="service-media">
-          <div class="service-media-frame"><img src="../assets/images/placeholder.svg" alt="{{TITLE}} uygulama görseli (eklenecek)"><span class="media-badge" data-icon="{{ICON}}">{{NUM}}</span></div>
-          <p class="media-note">Görsel alanı: bu hizmete ait saha fotoğrafı buraya eklenecek.</p>
+          <div class="service-media-frame"><img src="../assets/images/placeholder.svg" alt="{{TITLE}} uygulama görseli (eklenecek)"><span class="media-badge" data-icon="{{ICON}}">{{NUM}}</span><span class="media-caption">{{TITLE}} · Yiba saha uygulaması</span></div>
+          <div class="service-highlights">
+            <div><span class="service-highlight-icon" data-icon="road"></span><strong>Yüzey açılmaz</strong><small>Trafik ve peyzaj korunur</small></div>
+            <div><span class="service-highlight-icon" data-icon="target"></span><strong>Hassas güzergâh</strong><small>Kot ve doğrultu kontrolü</small></div>
+            <div><span class="service-highlight-icon" data-icon="check"></span><strong>Keşif sonrası teklif</strong><small>Projeye özel yöntem</small></div>
           </div>
+        </div>
         <div class="service-copy">
           <p class="eyebrow eyebrow-pill" data-icon="{{ICON}}">{{TITLE}}</p>
           <h2>{{TITLE}} <em>nedir, nerede kullanılır?</em></h2>
@@ -155,7 +159,7 @@ foreach ($sv in $services) {
   $faqLd = ($sv.faq | ForEach-Object { '{"@type":"Question","name":"' + $_[0].Replace('"','\"') + '","acceptedAnswer":{"@type":"Answer","text":"' + $_[1].Replace('"','\"') + '"}}' }) -join ","
   $html = $template.Replace('{{TITLE}}',$sv.title).Replace('{{SLUG}}',$sv.slug).Replace('{{DOMAIN}}',$domain).Replace('{{PRELOADER}}',$preloader).Replace('{{NUM}}',$sv.num).Replace('{{ICON}}',$sv.icon).Replace('{{LEAD}}',$sv.lead).Replace('{{P1}}',$sv.p1).Replace('{{P2}}',$sv.p2).Replace('{{AREAS}}',$areas).Replace('{{CARDS}}',$cards).Replace('{{OTHERS}}',$others).Replace('{{FAQ}}',$faq).Replace('{{FAQ_LD}}',$faqLd)
   $photo = "$Root\assets\images\hizmetler\$($sv.slug).jpg"
-  if (Test-Path $photo) { $html = $html.Replace('<img src="../assets/images/placeholder.svg" alt="' + $sv.title + ' uygulama görseli (eklenecek)">', '<img src="../assets/images/hizmetler/' + $sv.slug + '.jpg" alt="' + $sv.title + ' saha uygulaması">').Replace('<p class="media-note">Görsel alanı: bu hizmete ait saha fotoğrafı buraya eklenecek.</p>', '') }
+  if (Test-Path $photo) { $html = $html.Replace('<img src="../assets/images/placeholder.svg" alt="' + $sv.title + ' uygulama görseli (eklenecek)">', '<img src="../assets/images/hizmetler/' + $sv.slug + '.jpg" alt="' + $sv.title + ' saha uygulaması">') }
   [System.IO.File]::WriteAllText("$Root\hizmetler\$($sv.slug).html", $html, $utf8)
   $count++
 }
