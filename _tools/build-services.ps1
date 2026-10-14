@@ -1,6 +1,6 @@
 ﻿param([string]$Root)
 $utf8 = New-Object System.Text.UTF8Encoding $false
-$domain = "https://www.yibayataysondaj.com"
+$domain = "http://yiba.oxit.net.tr"
 New-Item -ItemType Directory -Force "$Root\hizmetler" | Out-Null
 $preloader = [regex]::Match([System.IO.File]::ReadAllText("$Root\kurumsal.html", [System.Text.Encoding]::UTF8), '(?s)<div class="preloader".*?</div></div></div>').Value.Replace('src="assets/','src="../assets/')
 

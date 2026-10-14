@@ -1,6 +1,6 @@
 ﻿param([string]$Root)
 $utf8 = New-Object System.Text.UTF8Encoding $false
-$domain = "https://www.yibayataysondaj.com"
+$domain = "http://yiba.oxit.net.tr"
 $preloader = [regex]::Match([System.IO.File]::ReadAllText("$Root\kurumsal.html", [System.Text.Encoding]::UTF8), '(?s)<div class="preloader".*?</div></div></div>').Value
 
 $pages = @(

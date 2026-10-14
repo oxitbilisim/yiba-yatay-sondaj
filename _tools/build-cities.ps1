@@ -1,7 +1,7 @@
 ﻿param([string]$Root = "C:\Users\Lenovo\Desktop\yıbayataysondaj")
 
 $utf8 = New-Object System.Text.UTF8Encoding $false
-$domain = "https://www.yibayataysondaj.com"
+$domain = "http://yiba.oxit.net.tr"
 
 $regions = [ordered]@{
   "Marmara Bölgesi" = @(

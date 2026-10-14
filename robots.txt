@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.yibayataysondaj.com/sitemap.xml
+Sitemap: http://yiba.oxit.net.tr/sitemap.xml

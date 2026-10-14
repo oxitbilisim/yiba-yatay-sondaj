@@ -1,4 +1,3 @@
-if (/(^|\.)oxit\.net\.tr$/i.test(location.hostname)) { const m = document.createElement("meta"); m.name = "robots"; m.content = "noindex, nofollow"; m.dataset.note = "staging-noindex"; document.head.appendChild(m); }
 const cities = [
   ["Adana", "adana"], ["Adıyaman", "adiyaman"], ["Afyonkarahisar", "afyonkarahisar"], ["Ağrı", "agri"],
   ["Amasya", "amasya"], ["Ankara", "ankara"], ["Antalya", "antalya"], ["Artvin", "artvin"],
