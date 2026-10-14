@@ -24,7 +24,7 @@ const cities = [
 ];
 
 const navItems = [
-  { label: "Home", href: "index.html", pages: ["home"] },
+  { label: "Ana Sayfa", href: "index.html", pages: ["home"] },
   { label: "Kurumsal", href: "kurumsal.html", pages: ["corporate"], children: [
     ["Hakkımızda", "kurumsal.html"],
     ["Vizyon & Misyon", "vizyon-misyon.html"],
