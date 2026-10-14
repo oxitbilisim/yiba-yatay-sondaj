@@ -110,7 +110,7 @@ $template = @'
     <section class="section-pad about-section corp-page service-page">
       <div class="container service-detail-grid">
         <div class="service-media">
-          <div class="service-media-frame"><img src="../assets/images/placeholder.svg" alt="{{TITLE}} uygulama görseli (eklenecek)"><span class="media-badge" data-icon="{{ICON}}">{{NUM}}</span><span class="media-caption">{{TITLE}} · Yiba saha uygulaması</span></div>
+          <div class="service-media-frame"><img src="../assets/images/placeholder.svg" alt="{{TITLE}} uygulama görseli (eklenecek)"></div>
           <div class="service-highlights">
             <div><span class="service-highlight-icon" data-icon="road"></span><strong>Yüzey açılmaz</strong><small>Trafik ve peyzaj korunur</small></div>
             <div><span class="service-highlight-icon" data-icon="target"></span><strong>Hassas güzergâh</strong><small>Kot ve doğrultu kontrolü</small></div>
