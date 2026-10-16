@@ -97,7 +97,7 @@ $pages = @(
      ) }
 )
 
-$allLinks = New-Object System.Collections.ArrayList; [void]$allLinks.Add(@("Hakkımızda","kurumsal.html")); foreach ($pg0 in $pages) { [void]$allLinks.Add(@($pg0.title, "$($pg0.slug).html")) }
+$allLinks = New-Object System.Collections.ArrayList; [void]$allLinks.Add(@("Hakkımızda","kurumsal")); foreach ($pg0 in $pages) { [void]$allLinks.Add(@($pg0.title, "$($pg0.slug)")) }
 
 $template = @'
 <!doctype html>
@@ -106,21 +106,21 @@ $template = @'
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{TITLE}} | Kurumsal - Yiba Yatay Sondaj</title>
   <meta name="description" content="{{DESC}}">
-  <link rel="canonical" href="{{DOMAIN}}/{{SLUG}}.html">
+  <link rel="canonical" href="{{DOMAIN}}/{{SLUG}}">
   <meta property="og:title" content="{{TITLE}} | Yiba Yatay Sondaj">
   <meta property="og:description" content="{{DESC}}">
   <meta property="og:image" content="{{DOMAIN}}/assets/images/yiba-logo.png">
-  <meta property="og:url" content="{{DOMAIN}}/{{SLUG}}.html">
+  <meta property="og:url" content="{{DOMAIN}}/{{SLUG}}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Kurumsal","item":"{{DOMAIN}}/kurumsal.html"},{"@type":"ListItem","position":3,"name":"{{TITLE}}","item":"{{DOMAIN}}/{{SLUG}}.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Kurumsal","item":"{{DOMAIN}}/kurumsal"},{"@type":"ListItem","position":3,"name":"{{TITLE}}","item":"{{DOMAIN}}/{{SLUG}}"}]}</script>
 </head>
 <body data-page="corporate">
   {{PRELOADER}}
   <div id="site-header"></div>
   <main>
-    <section class="page-hero" style="background-image:url('assets/images/banner.jpg')"><div class="container page-hero-content"><p class="eyebrow eyebrow-pill eyebrow-pill-dark" data-icon="bolt">{{PILL}}</p><h1>{{H1}}</h1><div class="breadcrumbs"><a href="index.html">Ana Sayfa</a><span>/</span><a href="kurumsal.html">Kurumsal</a><span>/</span> {{TITLE}}</div></div></section>
+    <section class="page-hero" style="background-image:url('assets/images/banner.jpg')"><div class="container page-hero-content"><p class="eyebrow eyebrow-pill eyebrow-pill-dark" data-icon="bolt">{{PILL}}</p><h1>{{H1}}</h1><div class="breadcrumbs"><a href="./">Ana Sayfa</a><span>/</span><a href="kurumsal">Kurumsal</a><span>/</span> {{TITLE}}</div></div></section>
 
     <section class="section-pad about-section corp-page">
       <div class="container">
@@ -157,7 +157,7 @@ foreach ($pg in $pages) {
   $paras = ($pg.paras | ForEach-Object { "<p class=`"about-text`">$_</p>" }) -join "`n          "
   $cardsClass = if ($pg.cards.Count -eq 4) { " corp-cards-4" } else { "" }
   $cards = ($pg.cards | ForEach-Object { "<article><span class=`"corp-card-icon`" data-icon=`"$($_[0])`"></span><h3>$($_[1])</h3><p>$($_[2])</p></article>" }) -join ""
-  $links = ($allLinks | Where-Object { $_[1] -ne "$($pg.slug).html" } | ForEach-Object { "<a href=`"$($_[1])`">$($_[0])</a>" }) -join ""
+  $links = ($allLinks | Where-Object { $_[1] -ne "$($pg.slug)" } | ForEach-Object { "<a href=`"$($_[1])`">$($_[0])</a>" }) -join ""
   $st2 = ""; if ($pg.st2Title) { $st2 = "<div class=`"statement-card statement-card-alt`"><span class=`"statement-label`">$($pg.st2Title)</span><p>$($pg.st2)</p></div>" }
   $leadShort = $pg.lead; if ($leadShort.Length -gt 150) { $leadShort = $leadShort.Substring(0, $leadShort.IndexOf('.', 90) + 1) }
   $h1Plain = $pg.h1 -replace '<[^>]+>',''

@@ -91,21 +91,21 @@ $template = @'
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{TITLE}} | Hizmetlerimiz - Yiba Yatay Sondaj</title>
   <meta name="description" content="{{TITLE}}: {{LEAD}} Yiba Yatay Sondaj, Ankara merkezli, 81 ilde hizmet.">
-  <link rel="canonical" href="{{DOMAIN}}/hizmetler/{{SLUG}}.html">
+  <link rel="canonical" href="{{DOMAIN}}/hizmetler/{{SLUG}}">
   <meta property="og:title" content="{{TITLE}} | Yiba Yatay Sondaj">
   <meta property="og:description" content="{{LEAD}}">
   <meta property="og:image" content="{{DOMAIN}}/assets/images/yiba-logo.png">
-  <meta property="og:url" content="{{DOMAIN}}/hizmetler/{{SLUG}}.html">
+  <meta property="og:url" content="{{DOMAIN}}/hizmetler/{{SLUG}}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/site.css"><script src="../assets/site.js" defer></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"{{TITLE}}","serviceType":"{{TITLE}}","url":"{{DOMAIN}}/hizmetler/{{SLUG}}.html","provider":{"@type":"HomeAndConstructionBusiness","name":"Yiba Yatay Sondaj","telephone":"+903122714747","url":"{{DOMAIN}}/"},"areaServed":"Türkiye"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Hizmetlerimiz","item":"{{DOMAIN}}/hizmetler.html"},{"@type":"ListItem","position":3,"name":"{{TITLE}}","item":"{{DOMAIN}}/hizmetler/{{SLUG}}.html"}]},{"@type":"FAQPage","mainEntity":[{{FAQ_LD}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"{{TITLE}}","serviceType":"{{TITLE}}","url":"{{DOMAIN}}/hizmetler/{{SLUG}}","provider":{"@type":"HomeAndConstructionBusiness","name":"Yiba Yatay Sondaj","telephone":"+903122714747","url":"{{DOMAIN}}/"},"areaServed":"Türkiye"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Hizmetlerimiz","item":"{{DOMAIN}}/hizmetler"},{"@type":"ListItem","position":3,"name":"{{TITLE}}","item":"{{DOMAIN}}/hizmetler/{{SLUG}}"}]},{"@type":"FAQPage","mainEntity":[{{FAQ_LD}}]}]}</script>
 </head>
 <body data-page="services">
   {{PRELOADER}}
   <div id="site-header"></div>
   <main>
-    <section class="page-hero" style="background-image:url('../assets/images/banner.jpg')"><div class="container page-hero-content"><p class="eyebrow eyebrow-pill eyebrow-pill-dark" data-icon="bolt">Hizmetlerimiz · {{NUM}}</p><h1>{{TITLE}}</h1><div class="breadcrumbs"><a href="../index.html">Ana Sayfa</a><span>/</span><a href="../hizmetler.html">Hizmetlerimiz</a><span>/</span> {{TITLE}}</div></div></section>
+    <section class="page-hero" style="background-image:url('../assets/images/banner.jpg')"><div class="container page-hero-content"><p class="eyebrow eyebrow-pill eyebrow-pill-dark" data-icon="bolt">Hizmetlerimiz · {{NUM}}</p><h1>{{TITLE}}</h1><div class="breadcrumbs"><a href="../">Ana Sayfa</a><span>/</span><a href="../hizmetler">Hizmetlerimiz</a><span>/</span> {{TITLE}}</div></div></section>
 
     <section class="section-pad about-section corp-page service-page">
       <div class="container service-detail-grid">
@@ -124,7 +124,7 @@ $template = @'
           <p class="about-text">{{P1}}</p>
           <p class="about-text">{{P2}}</p>
           <div class="service-areas"><span>Uygulama alanları</span>{{AREAS}}</div>
-          <div class="intro-actions"><a class="button button-dark" href="../iletisim.html">Bu hizmet için teklif alın <span>↗</span></a><a class="text-link" href="../hizmetler.html">Tüm hizmetlerimiz <span>↗</span></a></div>
+          <div class="intro-actions"><a class="button button-dark" href="../iletisim">Bu hizmet için teklif alın <span>↗</span></a><a class="text-link" href="../hizmetler">Tüm hizmetlerimiz <span>↗</span></a></div>
         </div>
       </div>
     </section>
@@ -153,8 +153,8 @@ $template = @'
 $count = 0
 foreach ($sv in $services) {
   $cards = ($sv.cards | ForEach-Object { "<article><span class=`"corp-card-icon`" data-icon=`"$($_[0])`"></span><h3>$($_[1])</h3><p>$($_[2])</p></article>" }) -join ""
-  $areas = ($sv.areas | ForEach-Object { "<a href=`"../sektorler.html`">$_</a>" }) -join ""
-  $others = ($services | Where-Object { $_.slug -ne $sv.slug } | Select-Object -First 6 | ForEach-Object { "<a href=`"$($_.slug).html`">$($_.title)</a>" }) -join ""
+  $areas = ($sv.areas | ForEach-Object { "<a href=`"../sektorler`">$_</a>" }) -join ""
+  $others = ($services | Where-Object { $_.slug -ne $sv.slug } | Select-Object -First 6 | ForEach-Object { "<a href=`"$($_.slug)`">$($_.title)</a>" }) -join ""
   $faq = ($sv.faq | ForEach-Object { "<details><summary>$($_[0])</summary><p>$($_[1])</p></details>" }) -join ""
   $faqLd = ($sv.faq | ForEach-Object { '{"@type":"Question","name":"' + $_[0].Replace('"','\"') + '","acceptedAnswer":{"@type":"Answer","text":"' + $_[1].Replace('"','\"') + '"}}' }) -join ","
   $html = $template.Replace('{{TITLE}}',$sv.title).Replace('{{SLUG}}',$sv.slug).Replace('{{DOMAIN}}',$domain).Replace('{{PRELOADER}}',$preloader).Replace('{{NUM}}',$sv.num).Replace('{{ICON}}',$sv.icon).Replace('{{LEAD}}',$sv.lead).Replace('{{P1}}',$sv.p1).Replace('{{P2}}',$sv.p2).Replace('{{AREAS}}',$areas).Replace('{{CARDS}}',$cards).Replace('{{OTHERS}}',$others).Replace('{{FAQ}}',$faq).Replace('{{FAQ_LD}}',$faqLd)

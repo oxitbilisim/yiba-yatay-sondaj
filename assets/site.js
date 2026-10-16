@@ -23,31 +23,31 @@ const cities = [
 ];
 
 const navItems = [
-  { label: "Ana Sayfa", href: "index.html", pages: ["home"] },
-  { label: "Kurumsal", href: "kurumsal.html", pages: ["corporate"], children: [
-    ["Hakkımızda", "kurumsal.html"],
-    ["Vizyon & Misyon", "vizyon-misyon.html"],
-    ["Değerlerimiz", "degerlerimiz.html"],
-    ["Kalite Politikamız", "kalite-politikamiz.html"],
-    ["İş Sağlığı ve Güvenliği", "is-sagligi-ve-guvenligi.html"],
-    ["Çevre & Sürdürülebilirlik", "cevre-ve-surdurulebilirlik.html"]
+  { label: "Ana Sayfa", href: "./", pages: ["home"] },
+  { label: "Kurumsal", href: "kurumsal", pages: ["corporate"], children: [
+    ["Hakkımızda", "kurumsal"],
+    ["Vizyon & Misyon", "vizyon-misyon"],
+    ["Değerlerimiz", "degerlerimiz"],
+    ["Kalite Politikamız", "kalite-politikamiz"],
+    ["İş Sağlığı ve Güvenliği", "is-sagligi-ve-guvenligi"],
+    ["Çevre & Sürdürülebilirlik", "cevre-ve-surdurulebilirlik"]
   ] },
-  { label: "Hizmetler", href: "hizmetler.html", pages: ["services"], wide: true, children: [
-    ["Yönlendirilebilir Yatay Sondaj", "hizmetler/yonlendirilebilir-yatay-sondaj.html"],
-    ["Yatay Delgi", "hizmetler/yatay-delgi.html"],
-    ["Boru Sürme ve İtme", "hizmetler/boru-surme-ve-itme.html"],
-    ["Çelik Boru Sürme", "hizmetler/celik-boru-surme.html"],
-    ["Yol Altı Geçişleri", "hizmetler/yol-alti-gecis.html"],
-    ["Demiryolu Altı Geçişleri", "hizmetler/demiryolu-alti-gecis.html"],
-    ["Dere ve Kanal Altı Geçişleri", "hizmetler/dere-ve-kanal-alti-gecis.html"],
-    ["Özel Geçiş Projeleri", "hizmetler/ozel-gecis-projeleri.html"],
-    ["Tüm hizmetlerimiz", "hizmetler.html", "all"]
+  { label: "Hizmetler", href: "hizmetler", pages: ["services"], wide: true, children: [
+    ["Yönlendirilebilir Yatay Sondaj", "hizmetler/yonlendirilebilir-yatay-sondaj"],
+    ["Yatay Delgi", "hizmetler/yatay-delgi"],
+    ["Boru Sürme ve İtme", "hizmetler/boru-surme-ve-itme"],
+    ["Çelik Boru Sürme", "hizmetler/celik-boru-surme"],
+    ["Yol Altı Geçişleri", "hizmetler/yol-alti-gecis"],
+    ["Demiryolu Altı Geçişleri", "hizmetler/demiryolu-alti-gecis"],
+    ["Dere ve Kanal Altı Geçişleri", "hizmetler/dere-ve-kanal-alti-gecis"],
+    ["Özel Geçiş Projeleri", "hizmetler/ozel-gecis-projeleri"],
+    ["Tüm hizmetlerimiz", "hizmetler", "all"]
   ] },
-  { label: "Sektörler", href: "sektorler.html", pages: ["sectors"] },
-  { label: "Makina Parkı", href: "makina-parkimiz.html", pages: ["machines"] },
-  { label: "Hizmet Bölgeleri", href: "hizmet-bolgeleri.html", pages: ["areas", "area-city"] },
-  { label: "Referanslar", href: "referanslar.html", pages: ["references"] },
-  { label: "İletişim", href: "iletisim.html", pages: ["contact"] }
+  { label: "Sektörler", href: "sektorler", pages: ["sectors"] },
+  { label: "Makina Parkı", href: "makina-parkimiz", pages: ["machines"] },
+  { label: "Hizmet Bölgeleri", href: "hizmet-bolgeleri", pages: ["areas", "area-city"] },
+  { label: "Referanslar", href: "referanslar", pages: ["references"] },
+  { label: "İletişim", href: "iletisim", pages: ["contact"] }
 ];
 
 const chevronDown = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
@@ -249,7 +249,7 @@ if (header) {
   header.innerHTML = `
     <div class="topbar"><div class="container topbar-inner"><span class="topbar-address">${icons.bolt} Ankara'dan 81 ile yönlendirilebilir yatay sondaj | Keşiften teslimata tek ekip</span><div><a href="tel:+903122714747">${icons.phone} +90 312 271 47 47</a><a class="topbar-mail" href="mailto:yibayataysondaj2@gmail.com">${icons.mail} yibayataysondaj2@gmail.com</a><a class="topbar-icon-link" href="https://wa.me/905321530007" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">${icons.whatsapp}</a><a class="topbar-icon-link" href="https://www.instagram.com/yibasondaj/" target="_blank" rel="noopener" aria-label="Instagram sayfamız">${icons.instagram}</a></div></div></div>
     <header class="site-header"><div class="container nav-wrap">
-      <a class="brand" href="${pagePrefix}index.html" aria-label="Yiba Yatay Sondaj ana sayfa"><img src="${assetPrefix}assets/images/yiba-logo-white.png" alt="Yiba Yatay Sondaj Ticaret Limited Şirketi logosu"></a>
+      <a class="brand" href="${pagePrefix || "./"}" aria-label="Yiba Yatay Sondaj ana sayfa"><img src="${assetPrefix}assets/images/yiba-logo-white.png" alt="Yiba Yatay Sondaj Ticaret Limited Şirketi logosu"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b class="sr-only">Menüyü aç</b></button>
       <nav id="primary-nav" class="primary-nav" aria-label="Ana menü">${navItems.map((item) => renderNavItem(item, pagePrefix, page)).join("")}</nav>
     </div></header>`;
@@ -259,10 +259,10 @@ if (footer) {
   footer.innerHTML = `
     <footer class="site-footer">
       <div class="container footer-main">
-        <div class="footer-brand-col"><a class="brand brand-footer" href="${pagePrefix}index.html"><img src="${assetPrefix}assets/images/yiba-logo-white.png" alt="Yiba Yatay Sondaj Ticaret Limited Şirketi logosu"></a><p>Yönlendirilebilir yatay sondaj ve kazısız altyapı uygulamalarında 2000'den bu yana güvenilir çözüm ortağınız.</p></div>
-        <div><h2>Kurumsal</h2><a href="${pagePrefix}kurumsal.html">Hakkımızda</a><a href="${pagePrefix}vizyon-misyon.html">Vizyon & Misyon</a><a href="${pagePrefix}degerlerimiz.html">Değerlerimiz</a><a href="${pagePrefix}kalite-politikamiz.html">Kalite Politikamız</a><a href="${pagePrefix}is-sagligi-ve-guvenligi.html">İş Sağlığı ve Güvenliği</a><a href="${pagePrefix}cevre-ve-surdurulebilirlik.html">Çevre & Sürdürülebilirlik</a></div>
-        <div><h2>Hizmetler</h2><a href="${pagePrefix}hizmetler/yonlendirilebilir-yatay-sondaj.html">Yönlendirilebilir yatay sondaj</a><a href="${pagePrefix}hizmetler/boru-surme-ve-itme.html">Boru sürme ve itme</a><a href="${pagePrefix}hizmetler/yol-alti-gecis.html">Yol altı geçişleri</a><a href="${pagePrefix}hizmetler/ozel-gecis-projeleri.html">Özel geçiş projeleri</a></div>
-        <div class="footer-areas"><h2>Hizmet Bölgeleri</h2>${[["Ankara", "ankara"], ["İstanbul", "istanbul"], ["İzmir", "izmir"], ["Bursa", "bursa"], ["Antalya", "antalya"], ["Konya", "konya"]].map(([name, slug]) => `<a href="${pagePrefix}hizmet-bolgeleri/${slug}-yatay-sondaj.html">${name} yatay sondaj</a>`).join("")}<a class="footer-all" href="${pagePrefix}hizmet-bolgeleri.html">81 ilin tamamı ↗</a></div>
+        <div class="footer-brand-col"><a class="brand brand-footer" href="${pagePrefix || "./"}"><img src="${assetPrefix}assets/images/yiba-logo-white.png" alt="Yiba Yatay Sondaj Ticaret Limited Şirketi logosu"></a><p>Yönlendirilebilir yatay sondaj ve kazısız altyapı uygulamalarında 2000'den bu yana güvenilir çözüm ortağınız.</p></div>
+        <div><h2>Kurumsal</h2><a href="${pagePrefix}kurumsal">Hakkımızda</a><a href="${pagePrefix}vizyon-misyon">Vizyon & Misyon</a><a href="${pagePrefix}degerlerimiz">Değerlerimiz</a><a href="${pagePrefix}kalite-politikamiz">Kalite Politikamız</a><a href="${pagePrefix}is-sagligi-ve-guvenligi">İş Sağlığı ve Güvenliği</a><a href="${pagePrefix}cevre-ve-surdurulebilirlik">Çevre & Sürdürülebilirlik</a></div>
+        <div><h2>Hizmetler</h2><a href="${pagePrefix}hizmetler/yonlendirilebilir-yatay-sondaj">Yönlendirilebilir yatay sondaj</a><a href="${pagePrefix}hizmetler/boru-surme-ve-itme">Boru sürme ve itme</a><a href="${pagePrefix}hizmetler/yol-alti-gecis">Yol altı geçişleri</a><a href="${pagePrefix}hizmetler/ozel-gecis-projeleri">Özel geçiş projeleri</a></div>
+        <div class="footer-areas"><h2>Hizmet Bölgeleri</h2>${[["Ankara", "ankara"], ["İstanbul", "istanbul"], ["İzmir", "izmir"], ["Bursa", "bursa"], ["Antalya", "antalya"], ["Konya", "konya"]].map(([name, slug]) => `<a href="${pagePrefix}hizmet-bolgeleri/${slug}-yatay-sondaj">${name} yatay sondaj</a>`).join("")}<a class="footer-all" href="${pagePrefix}hizmet-bolgeleri">81 ilin tamamı ↗</a></div>
         <div class="footer-contact"><h2>İletişim</h2><a href="tel:+903122714747">${icons.phone}<span>+90 312 271 47 47</span></a><a href="tel:+905322655807">${icons.phone}<span>+90 532 265 58 07</span></a><a href="https://wa.me/905321530007" target="_blank" rel="noopener">${icons.whatsapp}<span>+90 532 153 00 07</span></a><a href="mailto:yibayataysondaj2@gmail.com">${icons.mail}<span>yibayataysondaj2@gmail.com</span></a><a href="https://maps.app.goo.gl/3iwv2M8fkxDeFS4S7" target="_blank" rel="noopener">${icons.pin}<span>Yeşilova Mah. 4023. Cad. Ser Tower No:1/21, Etimesgut / Ankara</span></a></div>
       </div>
       <div class="container footer-bottom"><span>© <span data-year></span> Yiba Yatay Sondaj. All Rights Reserved. Designed by <a class="footer-credit" href="https://www.oxit.com.tr/" target="_blank" rel="noopener">Oxit Bilişim Teknolojileri</a></span></div>
@@ -334,7 +334,7 @@ if (menuToggle && primaryNav) {
 
 const cityGrid = document.getElementById("city-grid");
 if (cityGrid) {
-  cityGrid.innerHTML = cities.map(([name, slug]) => `<a href="hizmet-bolgeleri/${slug}-yatay-sondaj.html"><span>${name} yatay sondaj</span><i>↗</i></a>`).join("");
+  cityGrid.innerHTML = cities.map(([name, slug]) => `<a href="hizmet-bolgeleri/${slug}-yatay-sondaj"><span>${name} yatay sondaj</span><i>↗</i></a>`).join("");
 }
 
 const cityList = document.getElementById("city-list");

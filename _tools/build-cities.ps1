@@ -33,20 +33,20 @@ $template = @'
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{NAME}} Yatay Sondaj | Kazısız Altyapı ve Yatay Delgi - Yiba</title>
   <meta name="description" content="{{NAME}} yatay sondaj, yatay delgi ve boru geçişi hizmetleri. Yiba, {{NAME}} ilinde ve {{REGION}} genelinde kazısız altyapı projelerini saha ve proje koşullarına göre değerlendirir. 0312 271 47 47">
-  <link rel="canonical" href="{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj.html">
+  <link rel="canonical" href="{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj">
   <meta property="og:title" content="{{NAME}} Yatay Sondaj | Yiba Yatay Sondaj">
   <meta property="og:description" content="{{NAME}} ilinde yönlendirilebilir yatay sondaj, boru sürme ve kazısız altyapı geçişleri için Yiba ekibiyle görüşün.">
   <meta property="og:image" content="{{DOMAIN}}/assets/images/yiba-logo.png">
-  <meta property="og:url" content="{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj.html">
+  <meta property="og:url" content="{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj">
   <meta property="og:type" content="website">
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/site.css"><script src="../assets/site.js" defer></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"{{NAME}} Yatay Sondaj","serviceType":"Yönlendirilebilir yatay sondaj ve kazısız altyapı","url":"{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj.html","provider":{"@type":"HomeAndConstructionBusiness","name":"Yiba Yatay Sondaj","telephone":"+903122714747","email":"yibayataysondaj2@gmail.com","url":"{{DOMAIN}}/","address":{"@type":"PostalAddress","streetAddress":"Yeşilova Mah. 4023. Cad. Ser Tower No:1/21","addressLocality":"Etimesgut","addressRegion":"Ankara","addressCountry":"TR"}},"areaServed":{"@type":"AdministrativeArea","name":"{{NAME}}"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Hizmet Bölgeleri","item":"{{DOMAIN}}/hizmet-bolgeleri.html"},{"@type":"ListItem","position":3,"name":"{{NAME}} Yatay Sondaj","item":"{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"{{NAME}} ilinde yatay sondaj hizmeti veriyor musunuz?","acceptedAnswer":{"@type":"Answer","text":"Evet. Yiba Yatay Sondaj, Ankara merkezli ekibiyle {{NAME}} dahil Türkiye'nin 81 ilinde yönlendirilebilir yatay sondaj ve kazısız altyapı projelerini proje bazında değerlendirir."}},{"@type":"Question","name":"{{NAME}} yatay sondaj fiyatı nasıl belirlenir?","acceptedAnswer":{"@type":"Answer","text":"Fiyat; geçiş uzunluğu, boru çapı ve türü, zemin koşulları, derinlik ve saha erişimi gibi verilere göre belirlenir. Proje bilgilerini paylaştığınızda size özel teklif hazırlanır."}},{"@type":"Question","name":"Hangi altyapı hatları için yatay sondaj yapılabilir?","acceptedAnswer":{"@type":"Answer","text":"Doğalgaz, içme suyu, kanalizasyon, elektrik, fiber optik ve telekomünikasyon hatları ile çelik kılıf boru geçişleri için yatay sondaj ve boru sürme uygulanabilir."}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"{{NAME}} Yatay Sondaj","serviceType":"Yönlendirilebilir yatay sondaj ve kazısız altyapı","url":"{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj","provider":{"@type":"HomeAndConstructionBusiness","name":"Yiba Yatay Sondaj","telephone":"+903122714747","email":"yibayataysondaj2@gmail.com","url":"{{DOMAIN}}/","address":{"@type":"PostalAddress","streetAddress":"Yeşilova Mah. 4023. Cad. Ser Tower No:1/21","addressLocality":"Etimesgut","addressRegion":"Ankara","addressCountry":"TR"}},"areaServed":{"@type":"AdministrativeArea","name":"{{NAME}}"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Hizmet Bölgeleri","item":"{{DOMAIN}}/hizmet-bolgeleri"},{"@type":"ListItem","position":3,"name":"{{NAME}} Yatay Sondaj","item":"{{DOMAIN}}/hizmet-bolgeleri/{{SLUG}}-yatay-sondaj"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"{{NAME}} ilinde yatay sondaj hizmeti veriyor musunuz?","acceptedAnswer":{"@type":"Answer","text":"Evet. Yiba Yatay Sondaj, Ankara merkezli ekibiyle {{NAME}} dahil Türkiye'nin 81 ilinde yönlendirilebilir yatay sondaj ve kazısız altyapı projelerini proje bazında değerlendirir."}},{"@type":"Question","name":"{{NAME}} yatay sondaj fiyatı nasıl belirlenir?","acceptedAnswer":{"@type":"Answer","text":"Fiyat; geçiş uzunluğu, boru çapı ve türü, zemin koşulları, derinlik ve saha erişimi gibi verilere göre belirlenir. Proje bilgilerini paylaştığınızda size özel teklif hazırlanır."}},{"@type":"Question","name":"Hangi altyapı hatları için yatay sondaj yapılabilir?","acceptedAnswer":{"@type":"Answer","text":"Doğalgaz, içme suyu, kanalizasyon, elektrik, fiber optik ve telekomünikasyon hatları ile çelik kılıf boru geçişleri için yatay sondaj ve boru sürme uygulanabilir."}}]}]}</script>
 </head>
 <body data-page="area-city">
   <div class="preloader" aria-hidden="true"><div class="preloader-inner"><span class="preloader-ring"></span><img src="../assets/images/yiba-logo-white.png" alt=""><div class="preloader-bar"><span></span></div></div></div>
   <div id="site-header"></div>
   <main>
-    <section class="page-hero" style="background-image:url('../assets/images/banner.jpg')"><div class="container page-hero-content"><p class="eyebrow eyebrow-pill eyebrow-pill-dark" data-icon="bolt">{{NAME}} ve {{REGION}}</p><h1>{{NAME}} Yatay Sondaj <em>hizmetleri.</em></h1><div class="breadcrumbs"><a href="../index.html">Ana Sayfa</a><span>/</span><a href="../hizmet-bolgeleri.html">Hizmet Bölgeleri</a><span>/</span>{{NAME}} Yatay Sondaj</div></div></section>
+    <section class="page-hero" style="background-image:url('../assets/images/banner.jpg')"><div class="container page-hero-content"><p class="eyebrow eyebrow-pill eyebrow-pill-dark" data-icon="bolt">{{NAME}} ve {{REGION}}</p><h1>{{NAME}} Yatay Sondaj <em>hizmetleri.</em></h1><div class="breadcrumbs"><a href="../">Ana Sayfa</a><span>/</span><a href="../hizmet-bolgeleri">Hizmet Bölgeleri</a><span>/</span>{{NAME}} Yatay Sondaj</div></div></section>
 
     <section class="section-pad"><div class="container city-content">
       <p class="eyebrow eyebrow-pill" data-icon="bolt">Türkiye genelinde hizmet</p>
@@ -55,9 +55,9 @@ $template = @'
       <p>Yiba Yatay Sondaj, 2000 yılından bu yana edindiği tecrübeyle {{NAME}} ve {{REGION}} genelindeki projelerde geçiş güzergâhını, zemin koşullarını ve hat gereksinimlerini birlikte değerlendirir. Yönlendirilebilir yatay sondaj, yatay delgi, boru sürme ve altyapı boru geçişleri; yol altı, demiryolu altı, dere ve kanal geçişleri için uygulanabilen hizmetlerimiz arasındadır.</p>
 
       <div class="city-service-boxes">
-        <a href="../hizmetler/yonlendirilebilir-yatay-sondaj.html">Yönlendirilebilir yatay sondaj <span>↗</span></a>
-        <a href="../hizmetler/boru-surme-ve-itme.html">Boru sürme ve çelik boru itme <span>↗</span></a>
-        <a href="../hizmetler/yol-alti-gecis.html">Yol, demiryolu ve kanal altı geçişleri <span>↗</span></a>
+        <a href="../hizmetler/yonlendirilebilir-yatay-sondaj">Yönlendirilebilir yatay sondaj <span>↗</span></a>
+        <a href="../hizmetler/boru-surme-ve-itme">Boru sürme ve çelik boru itme <span>↗</span></a>
+        <a href="../hizmetler/yol-alti-gecis">Yol, demiryolu ve kanal altı geçişleri <span>↗</span></a>
       </div>
 
       <h2>{{NAME}} ilinde hangi projelerde<br><em>yatay sondaj uygulanır?</em></h2>
@@ -85,9 +85,9 @@ $template = @'
       </div>
 
       <h2>{{REGION}} içinde<br><em>diğer hizmet illerimiz</em></h2>
-      <div class="city-nearby">{{NEARBY_LINKS}}<a href="../hizmet-bolgeleri.html">81 ilin tamamı ↗</a></div>
+      <div class="city-nearby">{{NEARBY_LINKS}}<a href="../hizmet-bolgeleri">81 ilin tamamı ↗</a></div>
 
-      <div class="city-cta"><a class="button button-dark" href="../iletisim.html">{{NAME}} projeniz için iletişime geçin <span>↗</span></a><a class="text-link" href="tel:+903122714747">0312 271 47 47 <span>↗</span></a></div>
+      <div class="city-cta"><a class="button button-dark" href="../iletisim">{{NAME}} projeniz için iletişime geçin <span>↗</span></a><a class="text-link" href="tel:+903122714747">0312 271 47 47 <span>↗</span></a></div>
     </div></section>
 
   </main>
@@ -102,7 +102,7 @@ foreach ($region in $regions.Keys) {
   foreach ($city in $list) {
     $name = $city[0]; $slug = $city[1]
     $others = @($list | Where-Object { $_[1] -ne $slug })
-    $nearbyLinks = ($others | ForEach-Object { '<a href="' + $_[1] + '-yatay-sondaj.html">' + $_[0] + ' yatay sondaj</a>' }) -join ''
+    $nearbyLinks = ($others | ForEach-Object { '<a href="' + $_[1] + '-yatay-sondaj">' + $_[0] + ' yatay sondaj</a>' }) -join ''
     $names = @($others | ForEach-Object { $_[0] })
     if ($names.Count -gt 1) { $nearbyNames = (($names[0..($names.Count-2)]) -join ', ') + ' ve ' + $names[-1] } else { $nearbyNames = $names[0] }
     $html = $template.Replace('{{NAME}}', $name).Replace('{{SLUG}}', $slug).Replace('{{REGION}}', $region).Replace('{{DOMAIN}}', $domain).Replace('{{NEARBY_LINKS}}', $nearbyLinks).Replace('{{NEARBY_NAMES}}', $nearbyNames)
