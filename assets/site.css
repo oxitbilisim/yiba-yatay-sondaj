@@ -1108,3 +1108,7 @@ a.machine-visual { cursor: zoom-in; color: inherit; }
 .service-highlights strong { font: 800 13px/1.2 var(--font-display); letter-spacing: -.02em; }
 .service-highlights small { color: #4a5663; font-size: 11px; line-height: 1.4; }
 @media (max-width: 780px) { .service-page .service-media-frame { min-height: 260px; } .service-highlights { gap: 8px; } .service-highlights > div { padding: 12px 8px; } .service-highlights small { display: none; } }
+.machine-visual-photo { padding: 0; }
+.machine-visual-photo::after { display: none; }
+.machine-visual-photo img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; filter: none; }
+.machine-visual-photo .machine-badge { -webkit-text-stroke: 2px rgba(255,255,255,.85); }

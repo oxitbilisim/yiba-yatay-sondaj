@@ -247,7 +247,7 @@ document.querySelectorAll(".intro-tabs").forEach((tabs) => {
 
 if (header) {
   header.innerHTML = `
-    <div class="topbar"><div class="container topbar-inner"><span class="topbar-address">${icons.bolt} Ankara'dan 81 ile yönlendirilebilir yatay sondaj | Keşiften teslimata tek ekip</span><div><a href="tel:+903122714747">${icons.phone} +90 312 271 47 47</a><a class="topbar-mail" href="mailto:yibayataysondaj2@gmail.com">${icons.mail} yibayataysondaj2@gmail.com</a><a class="topbar-icon-link" href="https://wa.me/905322655807" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">${icons.whatsapp}</a><a class="topbar-icon-link" href="https://www.instagram.com/yibasondaj/" target="_blank" rel="noopener" aria-label="Instagram sayfamız">${icons.instagram}</a></div></div></div>
+    <div class="topbar"><div class="container topbar-inner"><span class="topbar-address">${icons.bolt} Ankara'dan 81 ile yönlendirilebilir yatay sondaj | Keşiften teslimata tek ekip</span><div><a href="tel:+903122714747">${icons.phone} +90 312 271 47 47</a><a class="topbar-mail" href="mailto:yibayataysondaj2@gmail.com">${icons.mail} yibayataysondaj2@gmail.com</a><a class="topbar-icon-link" href="https://wa.me/905321530007" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">${icons.whatsapp}</a><a class="topbar-icon-link" href="https://www.instagram.com/yibasondaj/" target="_blank" rel="noopener" aria-label="Instagram sayfamız">${icons.instagram}</a></div></div></div>
     <header class="site-header"><div class="container nav-wrap">
       <a class="brand" href="${pagePrefix}index.html" aria-label="Yiba Yatay Sondaj ana sayfa"><img src="${assetPrefix}assets/images/yiba-logo-white.png" alt="Yiba Yatay Sondaj Ticaret Limited Şirketi logosu"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b class="sr-only">Menüyü aç</b></button>
@@ -263,7 +263,7 @@ if (footer) {
         <div><h2>Kurumsal</h2><a href="${pagePrefix}kurumsal.html">Hakkımızda</a><a href="${pagePrefix}vizyon-misyon.html">Vizyon & Misyon</a><a href="${pagePrefix}degerlerimiz.html">Değerlerimiz</a><a href="${pagePrefix}kalite-politikamiz.html">Kalite Politikamız</a><a href="${pagePrefix}is-sagligi-ve-guvenligi.html">İş Sağlığı ve Güvenliği</a><a href="${pagePrefix}cevre-ve-surdurulebilirlik.html">Çevre & Sürdürülebilirlik</a></div>
         <div><h2>Hizmetler</h2><a href="${pagePrefix}hizmetler/yonlendirilebilir-yatay-sondaj.html">Yönlendirilebilir yatay sondaj</a><a href="${pagePrefix}hizmetler/boru-surme-ve-itme.html">Boru sürme ve itme</a><a href="${pagePrefix}hizmetler/yol-alti-gecis.html">Yol altı geçişleri</a><a href="${pagePrefix}hizmetler/ozel-gecis-projeleri.html">Özel geçiş projeleri</a></div>
         <div class="footer-areas"><h2>Hizmet Bölgeleri</h2>${[["Ankara", "ankara"], ["İstanbul", "istanbul"], ["İzmir", "izmir"], ["Bursa", "bursa"], ["Antalya", "antalya"], ["Konya", "konya"]].map(([name, slug]) => `<a href="${pagePrefix}hizmet-bolgeleri/${slug}-yatay-sondaj.html">${name} yatay sondaj</a>`).join("")}<a class="footer-all" href="${pagePrefix}hizmet-bolgeleri.html">81 ilin tamamı ↗</a></div>
-        <div class="footer-contact"><h2>İletişim</h2><a href="tel:+903122714747">${icons.phone}<span>+90 312 271 47 47</span></a><a href="https://wa.me/905322655807" target="_blank" rel="noopener">${icons.whatsapp}<span>+90 532 265 58 07</span></a><a href="mailto:yibayataysondaj2@gmail.com">${icons.mail}<span>yibayataysondaj2@gmail.com</span></a><a href="https://maps.app.goo.gl/3iwv2M8fkxDeFS4S7" target="_blank" rel="noopener">${icons.pin}<span>Yeşilova Mah. 4023. Cad. Ser Tower No:1/21, Etimesgut / Ankara</span></a></div>
+        <div class="footer-contact"><h2>İletişim</h2><a href="tel:+903122714747">${icons.phone}<span>+90 312 271 47 47</span></a><a href="tel:+905322655807">${icons.phone}<span>+90 532 265 58 07</span></a><a href="https://wa.me/905321530007" target="_blank" rel="noopener">${icons.whatsapp}<span>+90 532 153 00 07</span></a><a href="mailto:yibayataysondaj2@gmail.com">${icons.mail}<span>yibayataysondaj2@gmail.com</span></a><a href="https://maps.app.goo.gl/3iwv2M8fkxDeFS4S7" target="_blank" rel="noopener">${icons.pin}<span>Yeşilova Mah. 4023. Cad. Ser Tower No:1/21, Etimesgut / Ankara</span></a></div>
       </div>
       <div class="container footer-bottom"><span>© <span data-year></span> Yiba Yatay Sondaj. All Rights Reserved. Designed by <a class="footer-credit" href="https://www.oxit.com.tr/" target="_blank" rel="noopener">Oxit Bilişim Teknolojileri</a></span></div>
     </footer>`;
@@ -275,7 +275,7 @@ document.body.insertAdjacentHTML("beforeend", `
     <a href="tel:+905322655807" aria-label="Hemen ara">${icons.phone}<span>Hemen ara</span></a>
     <a href="mailto:yibayataysondaj2@gmail.com" aria-label="E-posta gönder">${icons.mail}<span>E-posta</span></a>
     <a href="https://www.instagram.com/yibasondaj/" target="_blank" rel="noopener" aria-label="Instagram">${icons.instagram}<span>Instagram</span></a>
-    <a class="dock-main" href="https://wa.me/905322655807" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">${icons.whatsapp}<span>WhatsApp</span></a>
+    <a class="dock-main" href="https://wa.me/905321530007" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">${icons.whatsapp}<span>WhatsApp</span></a>
   </div>
   <button class="to-top" type="button" aria-label="Yukarı çık">${icons["arrow-up"]}</button>`);
 const toTop = document.querySelector(".to-top");
@@ -368,7 +368,7 @@ if (quoteForm) {
       const subject = encodeURIComponent(`Teklif talebi - ${data.get("city")} yatay sondaj`);
       window.location.href = `mailto:yibayataysondaj2@gmail.com?subject=${subject}&body=${encodeURIComponent(text)}`;
     } else {
-      window.open(`https://wa.me/905322655807?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+      window.open(`https://wa.me/905321530007?text=${encodeURIComponent(text)}`, "_blank", "noopener");
     }
     if (note) note.textContent = "Mesajınız hazırlandı. Açılan pencerede göndermeyi onaylayın.";
   });
