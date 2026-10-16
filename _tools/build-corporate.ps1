@@ -113,7 +113,7 @@ $template = @'
   <meta property="og:url" content="{{DOMAIN}}/{{SLUG}}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css?v=202610161437"><script src="assets/site.js?v=202610161437" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Kurumsal","item":"{{DOMAIN}}/kurumsal"},{"@type":"ListItem","position":3,"name":"{{TITLE}}","item":"{{DOMAIN}}/{{SLUG}}"}]}</script>
 </head>
 <body data-page="corporate">

@@ -98,7 +98,7 @@ $template = @'
   <meta property="og:url" content="{{DOMAIN}}/hizmetler/{{SLUG}}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
-  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/site.css"><script src="../assets/site.js" defer></script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/site.css?v=202610161437"><script src="../assets/site.js?v=202610161437" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"{{TITLE}}","serviceType":"{{TITLE}}","url":"{{DOMAIN}}/hizmetler/{{SLUG}}","provider":{"@type":"HomeAndConstructionBusiness","name":"Yiba Yatay Sondaj","telephone":"+903122714747","url":"{{DOMAIN}}/"},"areaServed":"Türkiye"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"{{DOMAIN}}/"},{"@type":"ListItem","position":2,"name":"Hizmetlerimiz","item":"{{DOMAIN}}/hizmetler"},{"@type":"ListItem","position":3,"name":"{{TITLE}}","item":"{{DOMAIN}}/hizmetler/{{SLUG}}"}]},{"@type":"FAQPage","mainEntity":[{{FAQ_LD}}]}]}</script>
 </head>
 <body data-page="services">
@@ -124,7 +124,7 @@ $template = @'
           <p class="about-text">{{P1}}</p>
           <p class="about-text">{{P2}}</p>
           <div class="service-areas"><span>Uygulama alanları</span>{{AREAS}}</div>
-          <div class="intro-actions"><a class="button button-dark" href="../iletisim">Bu hizmet için teklif alın <span>↗</span></a><a class="text-link" href="../hizmetler">Tüm hizmetlerimiz <span>↗</span></a></div>
+          <div class="intro-actions"><a class="button button-dark" href="../iletisim">Bu hizmet için teklif alın <span>↗︎</span></a><a class="text-link" href="../hizmetler">Tüm hizmetlerimiz <span>↗︎</span></a></div>
         </div>
       </div>
     </section>

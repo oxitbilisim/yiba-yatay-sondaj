@@ -1112,3 +1112,12 @@ a.machine-visual { cursor: zoom-in; color: inherit; }
 .machine-visual-photo::after { display: none; }
 .machine-visual-photo img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; filter: none; }
 .machine-visual-photo .machine-badge { -webkit-text-stroke: 2px rgba(255,255,255,.85); }
+
+/* hero controls: keep clear of proof line */
+.hero-aside { display: none; }
+.hero-controls { left: auto; right: max(28px, calc((100vw - 1180px) / 2)); bottom: 44px; transform: none; width: auto; margin: 0; }
+.hero-proof { margin-top: 36px; }
+@media (max-width: 780px) {
+  .hero-proof { display: none; }
+  .hero-controls { left: auto; right: 19px; bottom: 28px; }
+}
